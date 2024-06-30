@@ -35,11 +35,11 @@ Before running this script, ensure you have the following prerequisites installe
 ## Usage
 
 1. **Set the Input and Output Directories**:
-   Modify the `INPUT_DIR` and `OUTPUT_DIR` variables in the script to point to the desired input and output directories.
+   Modify the `INPUT_DIR` and `OUTPUT_DIR` variables in the script to point to the desired input and output directories. The Input directory should contain subdirectories which are named according to the three-letter language codes of the languages you want to process the child PDF files with. 
 
     ```sh
-    INPUT_DIR="/path/to/input/directory"
-    OUTPUT_DIR="/path/to/output/directory"
+    INPUT_DIR="/your/input/parent/directory/containing/language-directories"
+    OUTPUT_DIR="/your/output/directory"
     ```
 
 2. **Run the Script**:
