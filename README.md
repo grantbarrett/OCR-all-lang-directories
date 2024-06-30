@@ -54,7 +54,7 @@ Before running this script, ensure you have the following prerequisites installe
 
 - **Input Directory**: The script processes all subdirectories within the specified `INPUT_DIR`. Each subdirectory is expected to be named after the language code for OCR processing and should contain PDF files (not image-format files). Multiple languages can be used in the directory names, separated by a plus sign (`+`), e.g., `eng+spa`.
 - **Output Directory**: Processed files are saved in the `OUTPUT_DIR` with `_ocr` appended to the filename.
-- **OCR Processing**: Utilizes `ocrmypdf` with the following options:
+- **OCR Processing**: Uses `ocrmypdf` with the following options:
   - `--jobs 6`: Run 6 OCR jobs in parallel.
   - `-l "$lang_code"`: Specify the language code for OCR.
   - `--tesseract-oem 3`: Use the Tesseract OCR engine mode 3.
