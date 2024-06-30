@@ -2,16 +2,16 @@
 
 ## Description
 
-`OCR-all.sh` is a script designed to process PDF files in specified directories using OCR (Optical Character Recognition). The script activates iTerm, sources Zsh configuration, and processes each PDF file found in the input directory. The processed files are saved in the output directory, and the original files are moved to the trash. This script utilizes `ocrmypdf` for OCR processing.
+`OCR-all.sh` is a script designed to process PDF files in specified directories using OCR (Optical Character Recognition). The script activates iTerm (or any terminal of your choice), sources zsh configuration, and processes each PDF file found in the input directory. The processed files are saved in the output directory, and the original files are moved to the trash. This script utilizes OCRmyPDF for OCR processing.
 
 ## Prerequisites
 
 Before running this script, ensure you have the following prerequisites installed and configured:
 
-- **Zsh**: The script is written to run in Zsh.
-- **iTerm**: The script activates iTerm using AppleScript.
-- **ocrmypdf**: The OCR processing is handled by `ocrmypdf`, which should be installed and accessible at `/opt/homebrew/bin/ocrmypdf`.
-- **Homebrew**: Install Homebrew if not already installed to easily manage packages like `ocrmypdf`.
+- **zsh**: The script is written to run in zsh.
+- **iTerm**: The script activates iTerm using AppleScript. You can replace iTerm with your terminal of choice.
+- **OCRmyPDF**: The OCR processing is handled by OCRmyPDF, which should be installed and accessible at `/opt/homebrew/bin/ocrmypdf`.
+- **Homebrew**: Install Homebrew if not already installed to easily manage packages like OCRmyPDF.
 - **trash-cli**: The script uses the `trash` command to move processed files to the trash. Ensure it is installed and configured.
 
 ## Installation
@@ -20,8 +20,9 @@ Before running this script, ensure you have the following prerequisites installe
     ```bash
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     ```
+    For more details, visit the [Homebrew installation page](https://brew.sh).
 
-2. **Install ocrmypdf**:
+2. **Install OCRmyPDF**:
     ```bash
     brew install ocrmypdf
     ```
@@ -51,7 +52,7 @@ Before running this script, ensure you have the following prerequisites installe
 
 ## Script Details
 
-- **Input Directory**: The script processes all subdirectories within the specified `INPUT_DIR`. Each subdirectory is expected to be named after the language code for OCR processing. Multiple languages can be used in the directory names, separated by a plus sign (`+`), e.g., `eng+spa`.
+- **Input Directory**: The script processes all subdirectories within the specified `INPUT_DIR`. Each subdirectory is expected to be named after the language code for OCR processing and should contain PDF files (not image-format files). Multiple languages can be used in the directory names, separated by a plus sign (`+`), e.g., `eng+spa`.
 - **Output Directory**: Processed files are saved in the `OUTPUT_DIR` with `_ocr` appended to the filename.
 - **OCR Processing**: Utilizes `ocrmypdf` with the following options:
   - `--jobs 6`: Run 6 OCR jobs in parallel.
@@ -65,7 +66,7 @@ Before running this script, ensure you have the following prerequisites installe
 
 ## Documentation
 
-For more information on `ocrmypdf`, please refer to the [ocrmypdf documentation](https://ocrmypdf.readthedocs.io/en/latest/).
+For more information on OCRmyPDF, please refer to the [OCRmyPDF documentation](https://ocrmypdf.readthedocs.io/en/latest/).
 
 ### Language Packs
 
@@ -77,4 +78,4 @@ This project is licensed under the [Creative Commons Zero v1.0 Universal (CC0 1.
 
 ## Acknowledgments
 
-Special thanks to the developers of `ocrmypdf` and `trash-cli` for their tools that made this script possible.
+Special thanks to the developers of OCRmyPDF and trash-cli for their tools that made this script possible.
