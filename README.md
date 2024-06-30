@@ -2,7 +2,7 @@
 
 ## Description
 
-`OCR-all.sh` is a script designed to process PDF files in specified directories using OCR (Optical Character Recognition). The script activates iTerm (or any terminal of your choice), sources zsh configuration, and processes each PDF file found in the input directory. The processed files are saved in the output directory, and the original files are moved to the trash. This script utilizes OCRmyPDF for OCR processing.
+`OCR-all.sh` is a script designed to process PDF files in specified directories using OCR (Optical Character Recognition) on macOS. The script activates iTerm (or any terminal of your choice), sources zsh configuration, and processes each PDF file found in the input directory. The processed files are saved in the output directory, and the original files are moved to the trash. This script uses OCRmyPDF for OCR processing.
 
 ## Prerequisites
 
